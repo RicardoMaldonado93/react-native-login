@@ -13,7 +13,7 @@ const LoginScreen = () => (
 
     <View style={styles.input}>
       <TextInput
-        placeholder={'userName'}
+        placeholder={'Username'}
         placeholderTextColor={'white'}
         style={styles.inputView}
       />
@@ -31,22 +31,25 @@ const LoginScreen = () => (
     <TouchableOpacity style={styles.loginBtn}>
       <Text style={styles.loginText}>LOGIN</Text>
     </TouchableOpacity>
-    <TouchableOpacity>
+    <TouchableOpacity style={styles.signupBtn}>
       <Text style={styles.loginText}>Signup</Text>
     </TouchableOpacity>
+  
+    <View style={styles.versionContent}>
+      <Text style={styles.textVersion}>v0.1.0</Text>
+    </View>
   </View>
 );
 
 const styles = StyleSheet.create({
   container: {
-    display: 'flex',
-    borderColor: 'black',
-    borderWidth: 4,
+    flexGrow: 1,
     width: '100%',
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#003f5c',
+    backgroundColor: '#0e0f22',
+    flexDirection: 'column',
   },
   title: {
     color: '#fb5b5a',
@@ -57,7 +60,7 @@ const styles = StyleSheet.create({
   },
   input: {
     width: '80%',
-    backgroundColor: '#465881',
+    backgroundColor: '#1d1f44',
     borderRadius: 25,
     height: 50,
     marginBottom: 20,
@@ -74,18 +77,41 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   loginBtn: {
-    width:"80%",
-    backgroundColor:"#fb5b5a",
-    borderRadius:25,
-    height:50,
-    alignItems:"center",
-    justifyContent:"center",
-    marginTop:40,
-    marginBottom:10
+    width: '80%',
+    backgroundColor: '#fb5b5a',
+    borderRadius: 25,
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 40,
+    marginBottom: 10,
+  },
+  signupBtn: {
+    width: '80%',
+    // backgroundColor: '#fb5b5a',
+    borderRadius: 25,
+    height: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+    // marginTop: 40,
+    // marginBottom: 10,
   },
   loginText: {
     color: 'white',
     fontSize: 15,
+    fontWeight: 'bold',
+  },
+  versionContent: {
+    width: '100%',
+    alignItems: 'flex-end',
+    alignSelf: 'flex-end',
+    position:"absolute",
+    bottom:10,
+    right:20
+    // marginTop:"auto",
+  },
+  textVersion: {
+    color: '#dadadada',
     fontWeight:"bold"
   },
 });
